@@ -1,7 +1,6 @@
-================================================================
-  AI-BASED DEVICE LOGIN SECURITY SYSTEM
-  Java OOP Project with OpenAI Integration
-================================================================
+AI-BASED DEVICE LOGIN SECURITY SYSTEM
+Java OOP Project with OpenAI Integration
+
 
 OVERVIEW
 --------
@@ -9,7 +8,7 @@ A complete security login system built in Java using Object-Oriented
 Programming principles. Features AI-powered threat analysis via OpenAI.
 
 
-OOP CONCEPTS DEMONSTRATED
+## OOP CONCEPTS DEMONSTRATED
 --------------------------
 1. ENCAPSULATION
    - All fields are private in every class
@@ -38,33 +37,13 @@ OOP CONCEPTS DEMONSTRATED
    - ConsoleUI - static print helpers with color formatting
 
 
-PROJECT STRUCTURE
------------------
-src/com/security/
-├── Main.java                    - Entry point
-├── LoginSystem.java             - Interactive CLI menu
-├── model/
-│   ├── User.java                - User entity with OOP encapsulation
-│   ├── LoginAttempt.java        - Immutable login event record
-│   └── IntruderAlert.java      - Intruder detection event
-├── service/
-│   ├── SecuritySystem.java     - Core authentication engine
-│   ├── UserDatabase.java        - In-memory user registry
-│   └── SecurityLog.java        - File-based activity logger
-├── ai/
-│   └── AIModel.java            - OpenAI integration for threat analysis
-└── util/
-    ├── PasswordHasher.java     - SHA-256 + salt password hashing
-    └── ConsoleUI.java          - Colored terminal output
-
-
-REQUIREMENTS
+# REQUIREMENTS
 ------------
 - Java 17 or higher (uses switch expressions, text blocks)
 - OpenAI API key (optional - system works in offline mode without it)
 
 
-HOW TO COMPILE
+# HOW TO COMPILE
 --------------
   Option A (script):
     bash compile.sh
@@ -74,7 +53,7 @@ HOW TO COMPILE
     javac -d out src/com/security/**/*.java src/com/security/*.java
 
 
-HOW TO RUN
+# HOW TO RUN
 ----------
   Option A (script):
     bash run.sh
@@ -87,14 +66,14 @@ HOW TO RUN
     java -cp out com.security.Main
 
 
-DEFAULT TEST ACCOUNTS
+# DEFAULT TEST ACCOUNTS
 ---------------------
   Username: admin    Password: Admin@1234    Role: ADMIN
   Username: alice    Password: Alice@Pass1   Role: USER
   Username: bob      Password: Bob@Secure2   Role: USER
 
 
-PASSWORD POLICY
+# PASSWORD POLICY
 ---------------
   - Minimum 8 characters
   - At least 1 uppercase letter
@@ -104,14 +83,13 @@ PASSWORD POLICY
 
 SECURITY FEATURES
 -----------------
-  ✔ Password hashing (SHA-256 + random salt)
-  ✔ Account lockout after 3 failed attempts
-  ✔ Intruder detection and alert generation
-  ✔ AI-powered threat analysis (online or offline)
-  ✔ Login event logging to logs/login_attempts.txt
-  ✔ Intruder reports saved to intruder_logs/
-  ✔ Session management
-
+  - Password hashing (SHA-256 + random salt)
+  - Account lockout after 3 failed attempts
+  - Intruder detection and alert generation
+  - AI-powered threat analysis (online or offline)
+  - Login event logging to logs/login_attempts.txt
+  - Intruder reports saved to intruder_logs/
+  - Session management
 
 AI FEATURES (when OPENAI_API_KEY is set)
 -----------------------------------------
@@ -121,27 +99,6 @@ AI FEATURES (when OPENAI_API_KEY is set)
   - Countermeasure suggestions
 
 
-ARCHITECTURE DIAGRAM
----------------------
+ 
+# Semester Project | Java OOP | AI Integration
 
-  User (CLI)
-      ↓
-  LoginSystem  ──────────────────────────┐
-      ↓                                  │
-  SecuritySystem (authentication core)  │
-      ├── UserDatabase (user registry)  │
-      ├── SecurityLog (file logging)    │
-      └── AIModel (OpenAI integration)  │
-              ↓                          │
-         OpenAI API                     │
-         (online) or                    │
-         offline fallback               │
-              ↓                          │
-         Analysis returned ────────────┘
-              ↓
-        Console output + log files
-
-
-================================================================
-  Semester Project | Java OOP | AI Integration
-================================================================
